@@ -34,3 +34,42 @@
 ### Fixed Window Counter 알고리즘
 
 - 정해진 시간대의 Window가 만들어지고, 요청건수가 기록되어 요청건수 > 정해진 건수 -> 요청은 처리가 거부됨
+
+## Lambda For RestAPI (Region 내의 REST API)
+
+![4](./public/4.png)
+![3](./public/3.png)
+
+```sh
+    ## curl 예문
+
+    curl -i -X POST https://mj4vazqgeh.execute-api.ap-northeast-2.amazonaws.com/test/greet \
+    -H 'content-type: application/json' \
+    -d '{ "user_name": "leedonggyu", "user_password" : "123123123" }'
+```
+
+## Lambda For Cross Proxy (교차계정간의 Rest API)
+
+![5](./public/5.png)
+
+- 다른 계정에서 람다함수 생성
+
+    ![6](./public/6.png)
+    ![7](./public/7.png)
+
+- Lambda 프록시 기능 활성화
+
+    ![8](./public/8.png)
+
+- 다른계정의 람다함수에 API-Gateway 권한 추가
+
+    ![9](./public/9.png)
+    ![10](./public/10.png)
+    ![11](./public/11.png)
+    ![12](./public/12.png)
+
+
+
+## Reference
+
+- <a href="https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-tutorials.html"> Amazon API Gateway </a>

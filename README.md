@@ -104,12 +104,10 @@ func main() {
 
 ![13](./public/13.png)
 
-
-
-
-
 ## Reference
 
 - <a href="https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-tutorials.html"> Amazon API Gateway </a>
 
 - <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html#apigateway-private-api-create-interface-vpc-endpoint"> API Gateway용 VPC Endpoint </a>
+
+- <a href="https://urame.tistory.com/entry/AWS-API-Gateway-Private-Rest-%EB%A7%8C%EB%93%A4%EA%B8%B0"> API Gateway용 Private link </a>

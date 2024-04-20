@@ -7,16 +7,16 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-type MyEvent struct {
-	UserName     string `json:"user_name"`
-	UserPassword string `json:"user_password"`
+type Events struct {
+	Parameters map[string]string `json:"pathParameters"`
 }
 
-func HandleRequest(ctx context.Context, e *MyEvent) (*string, error) {
+func HandleRequest(ctx context.Context, e Events) (*string, error) {
 
-	uName, uPassword := e.UserName, e.UserPassword
+	fmt.Println(e)
 
-	str := fmt.Sprintf("username : %s password : %s", uName, uPassword)
+	str := "hello world"
+
 	return &str, nil
 }
 

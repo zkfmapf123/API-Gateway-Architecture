@@ -70,9 +70,46 @@
 
 ## Lambda For 프록시 통합
 
+- {proxy+} 생성
+
+    ![12.5](./public/12.5.png)
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/aws/aws-lambda-go/lambda"
+)
+
+type Events struct {
+	Parameters map[string]string `json:"pathParameters"`
+}
+
+func HandleRequest(ctx context.Context, e Events) (*string, error) {
+
+	fmt.Println(e)
+
+	str := "hello world"
+
+	return &str, nil
+}
+
+func main() {
+	lambda.Start(HandleRequest)
+}
+```
+
+![13](./public/13.png)
+
+
 
 
 
 ## Reference
 
 - <a href="https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/api-gateway-tutorials.html"> Amazon API Gateway </a>
+
+- <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html#apigateway-private-api-create-interface-vpc-endpoint"> API Gateway용 VPC Endpoint </a>

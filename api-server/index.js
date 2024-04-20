@@ -11,9 +11,9 @@ app.get("/health", (req, res) => {
 })
 
 app.get("/a", (req, res) => { return res.status(200).json("a") })
-app.get("/b", (req, res) => { return res.status(200).json("a") })
-app.get("/c", (req, res) => { return res.status(200).json("a") })
-app.get("/d", (req, res) => { return res.status(200).json("a") })
+app.get("/b", (req, res) => { return res.status(200).json("b") })
+app.get("/c", (req, res) => { return res.status(200).json("c") })
+app.get("/d", (req, res) => { return res.status(200).json("d") })
 app.listen(3000, () => {
     console.log("connect to port on 3000")
 })

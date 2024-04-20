@@ -99,7 +99,7 @@ resource "aws_ecs_task_definition" "ecs_server_task_def" {
   container_definitions = jsonencode([
     {
       name      = "ecs-server-container"
-      image     = "${aws_ecr_repository.server_ecr.repository_url}:1"
+      image     = "${aws_ecr_repository.server_ecr.repository_url}:2"
       cpu       = 256
       memory    = 512
       essential = true,

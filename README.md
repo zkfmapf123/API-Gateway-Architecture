@@ -76,4 +76,5 @@
 
 ## Reference
 
+- apigateway는 테라폼으로 구성할 엄두가 안남
 - <a href="https://hub.docker.com/repository/docker/zkfmapf123/donggyu-friends/general"> zkfmapf123/donggyu-friends public registry </a>

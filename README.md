@@ -42,3 +42,38 @@
 ## Reference
 
 - <a href="https://hub.docker.com/repository/docker/zkfmapf123/donggyu-friends/general"> zkfmapf123/donggyu-friends public registry </a>
+
+```
+    terraform init
+    terraform apply --auto-approve
+```
+
+## 구조
+
+- Service-A
+
+    - <b>api-gateway -> VPC link -> Private Subnet(ALB -> ECS)</b>
+
+- Service-B
+
+    - <b>api-gatweay -> Public Subnet(ALB -> ECS)</b>
+
+## api-gateway proxy 설정하는 법
+
+### api-gateway Route 설정
+
+- public/{proxy+}
+- private/{proxy+}
+
+![3](./public/3.png)
+
+### ALB 구성에서 Path에 {proxy} 추가
+
+- Serivce_A_ALB_DNS/{proxy}
+- Service_B_ALB_DNS/{proxy}
+
+![4](./public/4.png)
+
+### 결과
+
+![5](./public/5.png)

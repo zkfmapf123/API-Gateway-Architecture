@@ -8,7 +8,7 @@ module "a-ecs" {
   }
 
   lb_attr = {
-    internal             = false
+    internal             = true
     deregistration_delay = 60
   }
 

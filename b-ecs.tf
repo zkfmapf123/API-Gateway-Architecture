@@ -23,7 +23,7 @@ module "b-ecs" {
 
   is_create_cluster = {
     is_enable           = false
-    exists_cluster_name = aws_ecs_cluster.name
+    exists_cluster_name = aws_ecs_cluster.ecs_cluster.name
   }
 
   is_create_ecr = {
